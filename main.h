@@ -13,7 +13,7 @@ int _printf(const char *format, ...);
  * @c: Pointer to the flag
  * @f: Pointer to function
  *
- * Description: Longer description
+ * Description: Longer descriptions
  */
 typedef struct case_match
 {
