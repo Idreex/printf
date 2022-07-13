@@ -2,7 +2,7 @@
 /**
  * _printf - Prints the string
  * @format: A variable that points to a list of arguments
- * @...: The rest of the arguments
+ * @..: The rest of the arguments
  *
  * Return: the length of the printed string
  */
