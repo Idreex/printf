@@ -16,7 +16,7 @@ int char_case(va_list ptr, char **add)
 }
 /**
  * string_case - Add the argument string to the buffer
- * @ptr: A variable that points to a list of arguments
+ * @ptr: A variable that point to a list of arguments
  * @add: A pointer pointing to a memory address within the buffer
  *
  * Return: length of string added to buffer
