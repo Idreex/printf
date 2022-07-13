@@ -1,6 +1,6 @@
 # Our printf () function
 
-### Persons involved
+### Authors
 1. Idrees Oladimeji
 2. Naheemah Bello
 
