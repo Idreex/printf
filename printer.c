@@ -52,7 +52,7 @@ char *_strcpy(char *dest, char *src)
 /**
  * _strcat - concatenates two strings
  * @dest: string to append to
- * @src: string to add
+ * @src: string to append
  *
  * Return: a pointer to the resulting string
  */
