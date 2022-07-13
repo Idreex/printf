@@ -2,7 +2,7 @@
 /**
  * convert_base - Convert base and add argument in the buffer
  * @base: Number of base to convert
- * @number: Number to convert
+ * @number: Numbers to convert
  * @band: Flag with order to follow
  * @add: A pointer pointing to a memory address within the buffer
  *
