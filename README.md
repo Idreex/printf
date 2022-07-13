@@ -39,7 +39,7 @@ The following format specifiers are supported:
 Upon successful return, all functions return the number of characters written, _excluding_ the terminating null character used to end the string. If any error is encountered, `-1` is returned.
 
 ## Examples
-``c
+```c
 #include "main.h"
 
 int main()
