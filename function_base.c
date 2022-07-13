@@ -30,7 +30,7 @@ int digit_base_16_upper(va_list ptr, char **add)
  * @ptr: A variable that points to a list of arguments
  * @add: A pointer pointing to a memory address within the buffer
  *
- * Return: length of string added to buffer
+ * Return: length of strings added to buffer
  */
 int digit_base_16_lower(va_list ptr, char **add)
 {
