@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * match_case - function that matches the flag passed as an argument
+ * match_case - function that match the flag passed as an argument
  * @flag: pointer to flag
  *
  * Return: Pointer to function associated to flag
