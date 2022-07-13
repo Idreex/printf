@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * digit_case_S - custom conversion specifier
- * @ptr: A variable that points to a list of arguments
+ * @ptr: A variable that points to a list of argument
  * @add: A pointer pointing to a memory address within the buffer
  *
  * Return: length of string added to buffer
