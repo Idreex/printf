@@ -6,11 +6,17 @@
 #include <stdarg.h>
 #include <string.h>
 
+/**
+ * struct format_specifiers - A struct to hold format
+ * @specifier_type: The format specifier character
+ * @print: A pointer to the function that handles
+ */
+
 typedef struct format_specifiers
 {
 	char specifier_type;
 	int (*print)(va_list list);
-}print;
+} print;
 
 int _printf(const char *format, ...);
 int print_char(va_list list);

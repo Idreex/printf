@@ -1,9 +1,14 @@
 #include "main.h"
+/**
+ * _printf - Prints and handle various specifiers
+ * @format: Input string with format specifier
+ *
+ * Return: Number of character printed
+ */
 
 int _printf(const char *format, ...)
 {
 	va_list list;
-
 	int i, j;
 	int len = 0;
 	char newline = '\n';
@@ -14,11 +19,7 @@ int _printf(const char *format, ...)
 		{'s', print_str},
 		{'%', print_modulus},
 	};
-
 	array_size = sizeof(arr) / sizeof(arr[0]);
-
-/*	arr = {'c', print_char, 's', print_str, '%', print_modulus} */
-
 	if (format == NULL)
 		return (0);
 
@@ -43,10 +44,8 @@ int _printf(const char *format, ...)
 				}
 			}
 		}
-		
 	}
 	if (format[i] == '\n')
 		write(1, &newline, 1);
-
 	return (len + 1);
 }
