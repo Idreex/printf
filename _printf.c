@@ -49,3 +49,4 @@ int _printf(const char *format, ...)
 		write(1, &newline, 1);
 	return (len + 1);
 }
+
