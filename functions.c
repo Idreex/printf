@@ -24,6 +24,7 @@ int print_char(va_list list)
 
 int print_str(va_list list)
 {
+	int i;
 	char *str = va_arg(list, char *);
 
 	if (str == NULL)
@@ -32,7 +33,7 @@ int print_str(va_list list)
 		return (5);
 	}
 
-	int i = 0;
+	i = 0;
 
 	for (i = 0; str[i]; i++)
 	{
@@ -51,6 +52,8 @@ int print_str(va_list list)
 int print_modulus(va_list list)
 {
 	char c = '%';
+
+	(void)list;
 
 	write(1, &c, 1);
 	return (1);
