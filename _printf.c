@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 		{'s', print_str},
 		{'%', print_modulus},
 	};
-	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (0);
 	array_size = sizeof(specifier_holder) / sizeof(specifier_holder[0]);
 	va_start(list, format);
