@@ -3,7 +3,7 @@
  * _printf - Prints and handle various specifiers
  * @format: Input string with format specifier
  *
- * Return: Number of character printed
+ * Return: Always 0 (Success)
  */
 int _printf(const char *format, ...)
 {
