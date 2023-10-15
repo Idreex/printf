@@ -5,26 +5,20 @@
  *
  * Return: Number of character printed
  */
-
 int _printf(const char *format, ...)
 {
 	va_list list;
-	int i, j;
-	int len = 0;
+	size_t len = 0, i = 0, j, array_size;
 	char newline = '\n';
-	int array_size;
-
-	print arr[] = {
+	print specifier_holder[3] = {
 		{'c', print_char},
 		{'s', print_str},
 		{'%', print_modulus},
 	};
-	array_size = sizeof(arr) / sizeof(arr[0]);
 	if (format == NULL)
 		return (0);
-
+	array_size = sizeof(specifier_holder) / sizeof(specifier_holder[0]);
 	va_start(list, format);
-
 	for (i = 0; format[i]; i++)
 	{
 		if (format[i] != '%')
@@ -35,18 +29,28 @@ int _printf(const char *format, ...)
 		else
 		{
 			i++;
+			j = 0;
 			for (j = 0; j < array_size; j++)
 			{
-				if (format[i] == arr[j].specifier_type)
+				if (format[i] == specifier_holder[j].type_specifier)
 				{
-					arr[j].print(list);
+					len += specifier_holder[j].print(list);
 					break;
 				}
+			}
+			if (j == array_size)
+			{
+				char percent = '%';
+
+				write(1, &percent, 1);
+				write(1, &format[i], 1);
+				len += 2;
 			}
 		}
 	}
 	if (format[i] == '\n')
 		write(1, &newline, 1);
-	return (len + 1);
+	return (len);
+	va_end(list);
 }
 

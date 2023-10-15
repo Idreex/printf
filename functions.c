@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * print_char - Print a character
  * @list: A va_list containing the character to print
@@ -10,9 +9,8 @@
 int print_char(va_list list)
 {
 	char c = va_arg(list, int);
-
 	write(1, &c, 1);
-	return (1);
+	return 1;
 }
 
 /**
@@ -24,22 +22,19 @@ int print_char(va_list list)
 
 int print_str(va_list list)
 {
-	int i;
+	size_t i;
 	char *str = va_arg(list, char *);
 
 	if (str == NULL)
-	{
-		write(1, "(nil)", 5);
-		return (5);
-	}
+		str = "(null)";
 
 	i = 0;
-
-	for (i = 0; str[i]; i++)
+	while (str[i])
 	{
 		write(1, &str[i], 1);
+		i++;
 	}
-	return (1);
+	return i;
 }
 
 /**
@@ -51,11 +46,10 @@ int print_str(va_list list)
 
 int print_modulus(va_list list)
 {
-	char c = '%';
+	char c;
 
 	(void)list;
-
+	c = '%';
 	write(1, &c, 1);
-	return (1);
+	return 1;
 }
-

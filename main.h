@@ -3,8 +3,8 @@
 
 #include <stdio.h>
 #include <unistd.h>
+#include <stddef.h>
 #include <stdarg.h>
-#include <string.h>
 
 /**
  * struct format_specifiers - A struct to hold format
@@ -14,14 +14,13 @@
 
 typedef struct format_specifiers
 {
-	char specifier_type;
-	int (*print)(va_list list);
-} print;
+	char type_specifier;
+	int (*print)(va_list arg);
+}print;
 
 int _printf(const char *format, ...);
-int print_char(va_list list);
-int print_str(va_list list);
-int print_modulus(va_list list);
+int print_char(va_list arg);
+int print_str(va_list arg);
+int print_modulus(va_list arg);
 
 #endif
-
