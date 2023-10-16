@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <stddef.h>
 #include <stdarg.h>
+#include <stdlib.h>
 
 /**
  * struct format_specifiers - A struct to hold format
@@ -22,5 +23,6 @@ int _printf(const char *format, ...);
 int print_char(va_list arg);
 int print_str(va_list arg);
 int print_modulus(va_list arg);
+int print_int(va_list list);
 
 #endif
