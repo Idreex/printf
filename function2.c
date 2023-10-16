@@ -18,6 +18,11 @@ int print_int(va_list list)
 		return (1);
 	}
 
+	if (num == INT_MIN) {
+        write(1, "-2147483648", 11);
+        return 11;
+    }
+
 	if (num < 0)
 	{
 		write(1, "-", 1);
