@@ -24,5 +24,6 @@ int print_char(va_list arg);
 int print_str(va_list arg);
 int print_modulus(va_list arg);
 int print_int(va_list list);
+int print_binary(va_list list);
 
 #endif

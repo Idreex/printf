@@ -10,12 +10,13 @@ int _printf(const char *format, ...)
 	va_list list;
 	size_t len = 0, i = 0, j, array_size;
 	char newline = '\n';
-	print specifier_holder[5] = {
+	print specifier_holder[6] = {
 		{'c', print_char},
 		{'s', print_str},
 		{'%', print_modulus},
 		{'d', print_int},
 		{'i', print_int},
+		{'b', print_binary},
 	};
 	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (0);
