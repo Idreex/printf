@@ -25,5 +25,9 @@ int print_str(va_list arg);
 int print_modulus(va_list arg);
 int print_int(va_list list);
 int print_binary(va_list list);
+int print_unsigned(va_list list);
+int print_octal(va_list list);
+int print_hex_lower(va_list list);
+int print_hex_upper(va_list list);
 
 #endif
