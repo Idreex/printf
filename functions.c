@@ -25,9 +25,8 @@ int print_str(va_list list)
 	size_t i;
 	char *str = va_arg(list, char *);
 
-/*	if (str == NULL)
+	if (str == NULL)
 		str = "(null)";
-*/
 
 	i = 0;
 	while (str[i])
