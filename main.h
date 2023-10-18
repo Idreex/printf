@@ -34,5 +34,6 @@ int print_unsigned(va_list list);
 int print_octal(va_list list);
 int print_hex_lower(va_list list);
 int print_hex_upper(va_list list);
+int print_custom_string_S(va_list list);
 
 #endif
