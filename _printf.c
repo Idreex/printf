@@ -22,6 +22,7 @@ int _printf(const char *format, ...)
 		{'x', print_hex_lower},
 		{'X', print_hex_upper},
 		{'S', print_custom_string_S},
+		{'p', print_pointer},
 	};
 	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (0);
