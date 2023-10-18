@@ -11,8 +11,11 @@ int main(void)
 {
 	int len, len2;
 
-	len = _printf("%S", "No special character.");
-	len2 = printf("No special character.");
+	len = _printf("%S", "\x01\x02\x03\x04\x05\x06\x07");
+	printf("\n\n");
+	len2 = printf("\\x01\\x02\\x03\\x04\\x05\\x06\\x07");
+	printf("\n\n");
+	len2 = _printf("\\x01\\x02\\x03\\x04\\x05\\x06\\x07");
 	fflush(stdout);
 	if (len != len2)
 	{

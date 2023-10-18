@@ -6,6 +6,9 @@
 #include <stddef.h>
 #include <stdarg.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include <stdbool.h>
+#include <limits.h>
 
 /**
  * struct format_specifiers - A struct to hold format specifiers
